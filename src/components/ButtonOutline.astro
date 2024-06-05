@@ -5,10 +5,9 @@ const defaultClasses =
 interface Props {
   href: string;
   className?: string;
-  onClick?: (event: MouseEvent) => void;
 }
 
-const { href, className, onClick } = Astro.props;
+const { href, className } = Astro.props;
 ---
 
 <a href={href} class={twMerge(defaultClasses, className)} type="button"
