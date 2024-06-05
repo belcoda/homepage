@@ -1,0 +1,284 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+import ButtonOutline from "../components/ButtonOutline.astro";
+import H1 from "../components/type/H1.astro";
+import Lead from "../components/type/Lead.astro";
+import Feature from "../components/Feature.astro";
+import Footer from "../components/Footer.astro";
+import CTA from "../components/CTA.astro";
+const call_url = "https://calendly.com/belcoda/demo";
+const documentation_url =
+  "https://docs.belcoda.org/getting_started/introduction";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <section class="pb-28">
+      <div
+        class="overflow-hidden pt-16 flex flex-wrap container items-center mx-auto gap-8"
+      >
+        <div class="w-full md:w-1/2 p-8">
+          <H1 className="mt-4">Software for social movements</H1>
+          <Lead className="mt-4"
+            >The all-in-one social change platform built for frontline
+            communities</Lead
+          >
+          <div class="flex flex-wrap -m-2.5 mb-20">
+            <div class="w-full md:w-auto p-2.5">
+              <div class="block">
+                <Button
+                  onClick={(ev) => console.log(ev)}
+                  href={documentation_url}
+                  className="py-3 font-extrabold">Try now</Button
+                >
+              </div>
+            </div>
+            <div class="w-full md:w-auto p-2.5">
+              <div class="block">
+                <ButtonOutline href={call_url} className="py-2 font-extrabold">
+                  <div class="flex justify-center gap-1 items-center">
+                    <div class="w-auto p-1">
+                      <svg
+                        width="19"
+                        height="18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.75 3.75C2.75 2.92157 3.42157 2.25 4.25 2.25H6.70943C7.03225 2.25 7.31886 2.45657 7.42094 2.76283L8.5443 6.13291C8.66233 6.48699 8.50203 6.87398 8.1682 7.0409L6.47525 7.88737C7.30194 9.72091 8.77909 11.1981 10.6126 12.0247L11.4591 10.3318C11.626 9.99796 12.013 9.83767 12.3671 9.9557L15.7372 11.0791C16.0434 11.1811 16.25 11.4677 16.25 11.7906V14.25C16.25 15.0784 15.5784 15.75 14.75 15.75H14C7.7868 15.75 2.75 10.7132 2.75 4.5V3.75Z"
+                          stroke="black"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="w-auto p-1">
+                      <span>Book a call</span>
+                    </div>
+                  </div>
+                </ButtonOutline>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 p-8">
+            <img
+              class="transform hover:-translate-y-16 transition ease-in-out duration-1000"
+              src="flaro-assets/images/headers/header.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="min-w-5xl">
+          <img
+            src="https://i.ibb.co/D46xHv7/frame-generic-dark.png"
+            alt="Screenshot of Belcoda"
+            class="duration-1000 transform hover:-translate-y-16 transition ease-in-out"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="pt-28 overflow-hidden">
+      <a id="features"></a>
+      <div class="container px-4 mx-auto">
+        <H1 className="text-center mb-12">Helping build movement power</H1>
+        <div class="flex flex-wrap xl:items-center -m-8 xl:-m-10">
+          <div class="w-full md:w-1/2 p-8 xl:p-10">
+            <a class="block overflow-hidden rounded-3xl" href="#">
+              <img
+                class="w-full transform hover:scale-105 transition ease-in-out duration-1000"
+                src="https://images.unsplash.com/photo-1473594659356-a404044aa2c2?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHwyNXx8ZmFybWVyJTIwd29tYW58ZW58MHx8fHwxNzE3MjMyMTY5fDA&ixlib=rb-4.0.3&q=85&w=1920"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <div class="w-full md:w-1/2 xl:flex-1 p-8 xl:p-10">
+            <div class="md:max-w-xl">
+              <div class="mb-11 pb-8 border-b">
+                <h3 class="text-lg font-semibold md:max-w-lg">
+                  Most software for social movements is built to meet the
+                  specific needs of activists in a few Global North countries.
+                  Everyone else is stuck with tools that don't meet their needs.
+                </h3>
+                <p class="text-lg md:max-w-lg mt-4 text-gray-700">
+                  But software should be empowering social change, not holding
+                  it back. That's why we're building Belcoda, social change
+                  software for <em>everyone</em>.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 -m-8">
+                <Feature>
+                  <div slot="title" class="flex items-center">
+                    <div>Built for WhatsApp</div>
+                    <img src="/logos/wa.png" alt="WhatsApp" class="h-7" />
+                  </div>
+                  <p slot="body">
+                    Not everyone uses email. Reach your members where they are.
+                    Belcoda even supports event signups, petitions, and more via
+                    WhatsApp - no email required.
+                  </p></Feature
+                >
+                <Feature title="Works worldwide">
+                  <span slot="title">Works worldwide</span>
+                  <p slot="body">
+                    Belcoda supports multiple languages, currencies, address
+                    formats and more. Lightweight and snappy, even on devices
+                    with low power, bandwidth and data.
+                  </p>
+                </Feature>
+              </div>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 container mx-auto max-w-2xl gap-4 lg:gap-8"
+          >
+            <div class="md:col-span-2 col-span-1">
+              <Feature>
+                <span slot="title" class="text-2xl font-bold"
+                  >Organize and connect your community</span
+                >
+                <div slot="body" class="space-y-3">
+                  <p>
+                    All of your members, all in one place – and kept up to date.
+                    Keep track of engagement, manage groups, and run detailed
+                    reports.
+                  </p><p>
+                    Empower your members to take action, with tools for
+                    petitions, events, fundraising and more.
+                  </p>
+
+                  <p>
+                    Elected officials and district boundary databases are built
+                    in to support high impact online campaigns and organizing.
+                    If we don't yet support your country, <a href={call_url}
+                      >get in touch</a
+                    >.
+                  </p>
+                  <p>
+                    Get your own website (with custom domain). Add blog posts,
+                    media releases and more. Events and other campaign actions
+                    are added automatically.
+                  </p>
+                  <p>
+                    Integrate with any external platform using webhooks and
+                    Belcoda's powerful REST API. In fact, it's what we use for
+                    the main Belcoda interface.
+                  </p>
+                </div>
+              </Feature>
+              <Feature>
+                <span slot="title" class="text-2xl font-bold"
+                  >Powerful, flexible, and free</span
+                >
+                <div class="space-y-3" slot="body">
+                  <p>
+                    Belcoda is 100% free and open source, released under the
+                    permissive MIT license.
+                  </p>
+                  <p class="font-semibold">
+                    There is a social, but not legal, expectation that you use
+                    Belcoda to do good.
+                  </p>
+                  <p>
+                    Want to help make Belcoda better? Check out the <a
+                      href="#"
+                      target="_blank">contributor guidelines</a
+                    > and join our <a href="#" target="_blank">Discord</a>.
+                  </p>
+                  <p>
+                    If you don't want to self-host Belcoda, we can provide
+                    fully-managed hosting and hands-on customer support. <a
+                      href={call_url}>Get in touch today</a
+                    >.
+                  </p>
+                </div>
+              </Feature>
+            </div>
+
+            <Feature title="Device support"
+              >Not everyone has access to fast internet and powerful devices.
+              Belcoda runs on low-bandwidth connections, without using excessive
+              mobile data. The mobile-first interface works smoothly on
+              low-powered phones and supports smaller screens.</Feature
+            >
+            <Feature title="Easy itegrations">
+              Belcoda’s powerful REST API enables integration with any external
+              platform. In fact, we used it to build the main Belcoda interface.
+            </Feature>
+            <Feature title="Up and running in minutes"
+              >We can set up a fully-hosted Belcoda instance in minutes,
+              configured for your needs. Complete with hands-on support from
+              experienced developers, campaigners and organizers who understand
+              your needs.
+            </Feature>
+            <Feature title="Free software">
+              Belcoda is 100% free and open source, released under the
+              permissive MIT license. There is a social, but not legal,
+              expectation that use Belcoda to do good. Want to help make Belcoda
+              better? Check out the contributor guidelines and join our Discord.
+            </Feature>
+          </div>
+        </div>
+      </div>
+    </section>
+    <CTA call_url={call_url} get_started_url={documentation_url} />
+    <Footer call_url={call_url} documentation_url={documentation_url} />
+  </main>
+
+  <style>
+    .astro-a {
+      position: absolute;
+      top: -32px;
+      left: 50%;
+      transform: translatex(-50%);
+      width: 220px;
+      height: auto;
+      z-index: -1;
+    }
+    a {
+      @apply font-medium text-blue-600 dark:text-blue-500 hover:underline;
+    }
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    .text-gradient {
+      background-image: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 400%;
+      background-position: 0%;
+    }
+    .instructions {
+      margin-bottom: 2rem;
+      border: 1px solid rgba(var(--accent-light), 25%);
+      background: linear-gradient(
+        rgba(var(--accent-dark), 66%),
+        rgba(var(--accent-dark), 33%)
+      );
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+    .instructions code {
+      font-size: 0.8em;
+      font-weight: bold;
+      background: rgba(var(--accent-light), 12%);
+      color: rgb(var(--accent-light));
+      border-radius: 4px;
+      padding: 0.3em 0.4em;
+    }
+    .instructions strong {
+      color: rgb(var(--accent-light));
+    }
+    .link-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+      gap: 2rem;
+      padding: 0;
+    }
+  </style>
+</Layout>
