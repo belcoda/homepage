@@ -5,11 +5,15 @@ const defaultClasses =
 interface Props {
   href: string;
   className?: string;
+  target?: string;
 }
 
-const { href, className } = Astro.props;
+const { href, className, target } = Astro.props;
 ---
 
-<a href={href} class={twMerge(defaultClasses, className)} type="button"
-  ><slot /></a
+<a
+  href={href}
+  class={twMerge(defaultClasses, className)}
+  type="button"
+  rel={target ? target : "_self"}><slot /></a
 >
