@@ -9,7 +9,7 @@ const { call_url, documentation_url } = Astro.props;
 <section class="relative pt-24 bg-black overflow-hidden">
   <img
     class="absolute left-1/2 bottom-0 h-full transform -translate-x-1/2"
-    src="flaro-assets/images/footers/gradient.svg"
+    src="/assets/footer_bg_gradient.svg"
     alt=""
   />
   <div class="relative z-10 container px-4 mx-auto">
@@ -17,14 +17,14 @@ const { call_url, documentation_url } = Astro.props;
       <div class="flex flex-wrap -m-8">
         <div class="w-full sm:w-1/2 lg:w-6/12 p-8">
           <div class="lg:max-w-sm">
-            <a class="mb-8 inline-block" href="#">
-              <img src="flaro-assets/logos/flaro-logo-light.svg" alt="" />
+            <a class="mb-8 inline-block" href="/">
+              <img src="/logos/belcoda_white.png" alt="Belcoda logo" />
             </a>
             <p
               class="mb-20 text-gray-400 font-medium leading-relaxed md:max-w-xs"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus
-              interdum facilisis odio scelerisque vel neque.
+              The all-in-one social change platform built for frontline
+              communities. Helping build movement power where it's needed most.
             </p>
             <div class="flex flex-wrap -m-1.5">
               <div class="w-auto p-1.5">
@@ -100,19 +100,15 @@ const { call_url, documentation_url } = Astro.props;
             <li class="mb-5">
               <a
                 class="text-white hover:text-gray-200 font-medium leading-relaxed"
-                href={documentation_url}>Documentation</a
-              >
-            </li>
-            <li class="mb-5">
-              <a
-                class="text-white hover:text-gray-200 font-medium leading-relaxed"
-                href="#">News & Stories</a
+                href={documentation_url}
+                target="_blank">Documentation</a
               >
             </li>
             <li>
               <a
                 class="text-white hover:text-gray-200 font-medium leading-relaxed"
-                href="#">Roadmap</a
+                href="https://belcoda.notion.site/Roadmap-098edea17a19414d9f201ae607397218?pvs=4"
+                target="_blank">Roadmap</a
               >
             </li>
           </ul>
@@ -127,25 +123,28 @@ const { call_url, documentation_url } = Astro.props;
             <li class="mb-5">
               <a
                 class="text-white hover:text-gray-200 font-medium leading-relaxed"
-                href="#">Discord</a
+                href="https://discord.gg/q7xPnzvswy"
+                target="_blank">Discord</a
               >
             </li>
             <li class="mb-5">
               <a
                 class="text-white hover:text-gray-200 font-medium leading-relaxed"
-                href="#">License</a
+                href="https://github.com/belcoda/belcoda/blob/main/LICENSE"
+                target="_blank">License</a
               >
             </li>
             <li class="mb-5">
               <a
                 class="text-white hover:text-gray-200 font-medium leading-relaxed"
-                href="#">Contributor Guidelines</a
+                href="https://github.com/belcoda/belcoda/blob/main/CONTRIBUTING.md"
+                target="_blank">Contributor Guidelines</a
               >
             </li>
             <li>
               <a
                 class="text-white hover:text-gray-200 font-medium leading-relaxed"
-                href="#">Privacy Policy</a
+                href="/privacy">Privacy Policy</a
               >
             </li>
           </ul>
@@ -160,13 +159,15 @@ const { call_url, documentation_url } = Astro.props;
             <li class="mb-5">
               <a
                 class="text-white hover:text-gray-200 font-medium leading-relaxed"
-                href="#">Jobs</a
+                href="https://belcoda.notion.site/Jobs-78f34ed4508d46f69a92e5fea15a7e19"
+                target="_blank">Jobs</a
               >
             </li>
             <li class="mb-5">
               <a
                 class="text-white hover:text-gray-200 font-medium leading-relaxed"
-                href={call_url}>Contact us</a
+                href={call_url}
+                target="_blank">Book a call</a
               >
             </li>
           </ul>
@@ -176,7 +177,7 @@ const { call_url, documentation_url } = Astro.props;
     <p
       class="py-5 text-sm text-gray-300 font-medium text-center leading-normal"
     >
-      Copyright © 2024 Belcoda LLC. All Rights Reserved
+      Copyright © {new Date().getFullYear()} Belcoda LLC. All Rights Reserved
     </p>
   </div>
 </section>
