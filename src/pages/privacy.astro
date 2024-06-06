@@ -1,0 +1,183 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import H1 from "../components/type/H1.astro";
+import H2 from "../components/type/H2.astro";
+import Lead from "../components/type/Lead.astro";
+import CTA from "../components/CTA.astro";
+const call_url = "https://calendly.com/django-belcoda/30min";
+const documentation_url =
+  "https://belcoda.notion.site/Documentation-835d2aed77ea4206ba97f6f71b962509?pvs=4";
+---
+
+<Layout title="Privacy - Belcoda">
+  <main>
+    <section class="container mx-auto px-8 py-20">
+      <H1>Privacy Policy</H1>
+      <div class="mt-8">
+        <Lead>
+          <span class="font-extrabold"
+            >Belcoda LLC takes privacy seriously.</span
+          > To better protect your privacy we provide this privacy policy notice
+          explaining the way your personal information is collected and used.</Lead
+        >
+      </div>
+      <div class="space-y-3">
+        <H2>Collection of Routine Information</H2>
+
+        <p>
+          The Belcoda application, this website, and other Belcoda products
+          track basic information about their visitors and users. This
+          information includes, but is not limited to, IP addresses, browser
+          details, timestamps and referring pages. None of this information can
+          personally identify specific visitors or users. The information is
+          tracked for routine administration and maintenance purposes.
+        </p>
+
+        <H2>Collection of Personal Information</H2>
+
+        <p>
+          As part of the necessary operations of Belcoda products, this website,
+          and the Belcoda application, certain personal information is
+          collected. This information includes, but is not limited to, email
+          addresses, phone numbers, and names. This information is used to
+          create user accounts, send notifications, and provide customer
+          support. This information is stored securely and is not shared with
+          third parties.
+        </p>
+
+        <p>
+          Self hosted instances of the Belcoda application do not transmit
+          personal information to Belcoda LLC. The personal information
+          collected via self hosted instances of the Belcoda application is
+          stored on the instance manager's infrastructure and is not accessible
+          by Belcoda LLC.
+        </p>
+
+        <p>
+          Depending on its configuration settings, a self-hosted Belcoda
+          instance may transmit routine information to Belcoda LLC. This
+          information includes, but is not limited to, IP addresses, browser
+          details, timestamps and referring pages. None of this information can
+          personally identify specific visitors or users. The information is
+          tracked for routine administration and maintenance purposes.
+        </p>
+
+        <H2>Cookies</H2>
+        <p>
+          Where necessary, this website, and other Belcoda products, use cookies
+          to store information about a visitor’s preferences and history in
+          order to better serve the vistor or user and/or present the visitor or
+          user with customized content.
+        </p>
+
+        <H2>Advertisement and Other Third Parties</H2>
+        <p>
+          Belcoda does not user advertising or third party trackers, and does
+          not share any user information with third parties, other than for the
+          purposes of administering the Belcoda application and related
+          products.
+        </p>
+
+        <H2>Links to Third Party Websites</H2>
+        <p>
+          We have included links on this website, and in other Belcoda products,
+          for your use and reference. We are not responsible for the privacy
+          policies on these websites. You should be aware that the privacy
+          policies of these websites may differ from our own.
+        </p>
+
+        <H2>Security</H2>
+        <p>
+          The security of your personal information is important to us, but
+          remember that no method of transmission over the Internet, or method
+          of electronic storage, is 100% secure. While we strive to use
+          commercially acceptable means to protect your personal information, we
+          cannot guarantee its absolute security.
+        </p>
+
+        <H2>Changes To This Privacy Policy</H2>
+        <p>
+          This Privacy Policy is effective as of 6 June 2024 and will remain in
+          effect except with respect to any changes in its provisions in the
+          future, which will be in effect immediately after being posted on this
+          page.
+        </p>
+
+        <p>
+          we reserve the right to update or change our Privacy Policy at any
+          time and you should check this Privacy Policy periodically. If we make
+          any material changes to this Privacy Policy, we will notify you either
+          through the email address you have provided us, or by placing a
+          prominent notice on our website.
+        </p>
+
+        <H2>Contact Information</H2>
+        <p>
+          For any questions or concerns regarding the privacy policy, please
+          send us an email to <a href="mailto:privacy@belcoda.org"
+            >hello@belcoda.org</a
+          >.
+        </p>
+      </div>
+    </section>
+    <CTA call_url={call_url} get_started_url={documentation_url} />
+    <Footer call_url={call_url} documentation_url={documentation_url} />
+  </main>
+
+  <style>
+    .astro-a {
+      position: absolute;
+      top: -32px;
+      left: 50%;
+      transform: translatex(-50%);
+      width: 220px;
+      height: auto;
+      z-index: -1;
+    }
+    a {
+      @apply font-medium text-blue-600 dark:text-blue-500 hover:underline;
+    }
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    .text-gradient {
+      background-image: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 400%;
+      background-position: 0%;
+    }
+    .instructions {
+      margin-bottom: 2rem;
+      border: 1px solid rgba(var(--accent-light), 25%);
+      background: linear-gradient(
+        rgba(var(--accent-dark), 66%),
+        rgba(var(--accent-dark), 33%)
+      );
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+    .instructions code {
+      font-size: 0.8em;
+      font-weight: bold;
+      background: rgba(var(--accent-light), 12%);
+      color: rgb(var(--accent-light));
+      border-radius: 4px;
+      padding: 0.3em 0.4em;
+    }
+    .instructions strong {
+      color: rgb(var(--accent-light));
+    }
+    .link-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+      gap: 2rem;
+      padding: 0;
+    }
+  </style>
+</Layout>
