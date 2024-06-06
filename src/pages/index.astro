@@ -7,6 +7,7 @@ import Lead from "../components/type/Lead.astro";
 import Feature from "../components/Feature.astro";
 import Footer from "../components/Footer.astro";
 import CTA from "../components/CTA.astro";
+import Nav from "../components/Nav.astro";
 const call_url = "https://calendly.com/django-belcoda/30min";
 const documentation_url =
   "https://belcoda.notion.site/Documentation-835d2aed77ea4206ba97f6f71b962509?pvs=4";
@@ -14,7 +15,8 @@ const documentation_url =
 
 <Layout title="Software for social movements - Belcoda">
   <main>
-    <section class="pb-28">
+    <section class="pb-28" id="main-header">
+      <Nav />
       <div
         class="overflow-hidden pt-16 flex flex-wrap container items-center mx-auto gap-8"
       >
@@ -75,7 +77,7 @@ const documentation_url =
         </div>
       </div>
     </section>
-    <section class="pt-28 overflow-hidden">
+    <section class="pt-28 overflow-hidden" id="main-section">
       <a id="features"></a>
       <div class="container px-4 mx-auto pb-20">
         <H1 className="text-center mb-12">Helping build movement power</H1>
@@ -256,6 +258,18 @@ const documentation_url =
       grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
       gap: 2rem;
       padding: 0;
+    }
+    #main-header {
+      background-image: url("/assets/header_gradient2.svg");
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    #main-section {
+      background-image: url("/assets/gradient3.svg");
+      background-position: top right;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   </style>
 </Layout>
